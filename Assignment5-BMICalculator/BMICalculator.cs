@@ -10,7 +10,7 @@ using System.Windows.Forms;
 /* Name: Shakil Hosin
  * Date: August 10, 2017
  * Description: BMI CALCULATOR 
- * Version: 0.3 - Finishing up the form and starting to add validations and calculations. 
+ * Version: 0.4 - Added the validations from the CalculateBMI button and entered the formula
  */
 
 namespace Assignment5_BMICalculator
@@ -27,34 +27,66 @@ namespace Assignment5_BMICalculator
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void CalculateBMI_Click(object sender, EventArgs e)
         {
+            //Checks whether the metric or imperial button is clicked down before calculating
+            if (MetricButton.Checked)
+            {
+                double result = Convert.ToDouble(TxtBoxWeight.Text) / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
+                TxtBoxResult.Text = "" + result;
 
+                if (result < 18.6)
+                {
+                    TxtBoxResult.Text = "Underweight";
+                }
+                if (result > 18.6 && result < 25)
+                {
+                    TxtBoxResult.Text = "Normal";
+                }
+                if (result >= 25 && result < 30)
+                {
+                    TxtBoxResult.Text = "Overweight";
+                }
+                if (result >= 30)
+                {
+                    TxtBoxResult.Text = "Obese";
+                }
+            }
+            // Does the same for the imperial calculations
+            if (ImperialButton.Checked)
+            {
+                double result = Convert.ToDouble(TxtBoxWeight.Text) * 703 / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
+                TxtBoxResult.Text = "" + result;
+
+                if (result < 18.6)
+                {
+                   TxtBoxResult.Text = "Underweight";
+                }
+                if (result > 18.6 && result < 25)
+                {
+                   TxtBoxResult.Text = "Normal";
+                }
+                if (result >= 25 && result < 30)
+                {
+                   TxtBoxResult.Text = "Overweight";
+                }
+                if (result >= 30)
+                {
+                    TxtBoxResult.Text = "Obese";
+                }
+            }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void MetricButton_Click(object sender, EventArgs e)
         {
-
+            LblMeasurement.Text = "Metres";
+            LblWMeasurement.Text = "Kilos";
         }
 
-        private void TxtBoxHeight_TextChanged(object sender, EventArgs e)
+        private void ImperialButton_Click(object sender, EventArgs e)
         {
-          
-        }
-
-        private void MetricButton_CheckedChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void TxtBoxWeight_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            LblMeasurement.Text = "Inches";
+            LblWMeasurement.Text = "Pounds";
         }
     }
 }

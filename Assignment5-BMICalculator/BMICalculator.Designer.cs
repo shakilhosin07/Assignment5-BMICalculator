@@ -32,26 +32,31 @@
             this.LblHeight = new System.Windows.Forms.Label();
             this.TxtBoxHeight = new System.Windows.Forms.TextBox();
             this.LblWeight = new System.Windows.Forms.Label();
-            this.ImperialButton = new System.Windows.Forms.RadioButton();
-            this.MetricButton = new System.Windows.Forms.RadioButton();
             this.TxtBoxWeight = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtBoxResult = new System.Windows.Forms.TextBox();
+            this.ImperialButton = new System.Windows.Forms.RadioButton();
+            this.MetricButton = new System.Windows.Forms.RadioButton();
             this.CalculateBMI = new System.Windows.Forms.Button();
+            this.LblMeasurement = new System.Windows.Forms.Label();
+            this.LblWMeasurement = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.78577F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.21422F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel1.Controls.Add(this.LblHeight, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.TxtBoxHeight, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LblWeight, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.TxtBoxWeight, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.TxtBoxResult, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.LblMeasurement, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.LblWMeasurement, 2, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(70, 106);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -60,7 +65,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(652, 281);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // LblHeight
             // 
@@ -73,20 +77,42 @@
             // 
             // TxtBoxHeight
             // 
-            this.TxtBoxHeight.Location = new System.Drawing.Point(290, 3);
+            this.TxtBoxHeight.Location = new System.Drawing.Point(227, 3);
             this.TxtBoxHeight.Name = "TxtBoxHeight";
-            this.TxtBoxHeight.Size = new System.Drawing.Size(100, 38);
+            this.TxtBoxHeight.Size = new System.Drawing.Size(219, 38);
             this.TxtBoxHeight.TabIndex = 4;
-            this.TxtBoxHeight.TextChanged += new System.EventHandler(this.TxtBoxHeight_TextChanged);
             // 
             // LblWeight
             // 
             this.LblWeight.AutoSize = true;
-            this.LblWeight.Location = new System.Drawing.Point(3, 76);
+            this.LblWeight.Location = new System.Drawing.Point(3, 99);
             this.LblWeight.Name = "LblWeight";
             this.LblWeight.Size = new System.Drawing.Size(141, 31);
             this.LblWeight.TabIndex = 5;
             this.LblWeight.Text = "My Weight";
+            // 
+            // TxtBoxWeight
+            // 
+            this.TxtBoxWeight.Location = new System.Drawing.Point(227, 102);
+            this.TxtBoxWeight.Name = "TxtBoxWeight";
+            this.TxtBoxWeight.Size = new System.Drawing.Size(219, 38);
+            this.TxtBoxWeight.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 31);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Your BMI:";
+            // 
+            // TxtBoxResult
+            // 
+            this.TxtBoxResult.Location = new System.Drawing.Point(227, 189);
+            this.TxtBoxResult.Name = "TxtBoxResult";
+            this.TxtBoxResult.Size = new System.Drawing.Size(219, 38);
+            this.TxtBoxResult.TabIndex = 8;
             // 
             // ImperialButton
             // 
@@ -98,7 +124,7 @@
             this.ImperialButton.TabStop = true;
             this.ImperialButton.Text = "Imperial Calculation";
             this.ImperialButton.UseVisualStyleBackColor = true;
-            this.ImperialButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.ImperialButton.Click += new System.EventHandler(this.ImperialButton_Click);
             // 
             // MetricButton
             // 
@@ -110,32 +136,7 @@
             this.MetricButton.TabStop = true;
             this.MetricButton.Text = "Metric Calculation";
             this.MetricButton.UseVisualStyleBackColor = true;
-            this.MetricButton.CheckedChanged += new System.EventHandler(this.MetricButton_CheckedChanged);
-            // 
-            // TxtBoxWeight
-            // 
-            this.TxtBoxWeight.Location = new System.Drawing.Point(290, 79);
-            this.TxtBoxWeight.Name = "TxtBoxWeight";
-            this.TxtBoxWeight.Size = new System.Drawing.Size(100, 38);
-            this.TxtBoxWeight.TabIndex = 6;
-            this.TxtBoxWeight.TextChanged += new System.EventHandler(this.TxtBoxWeight_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 149);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(416, 31);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Reccomended Calories:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // TxtBoxResult
-            // 
-            this.TxtBoxResult.Location = new System.Drawing.Point(481, 162);
-            this.TxtBoxResult.Name = "TxtBoxResult";
-            this.TxtBoxResult.Size = new System.Drawing.Size(100, 38);
-            this.TxtBoxResult.TabIndex = 8;
+            this.MetricButton.Click += new System.EventHandler(this.MetricButton_Click);
             // 
             // CalculateBMI
             // 
@@ -145,6 +146,23 @@
             this.CalculateBMI.TabIndex = 3;
             this.CalculateBMI.Text = "Calculate My BMI!";
             this.CalculateBMI.UseVisualStyleBackColor = true;
+            this.CalculateBMI.Click += new System.EventHandler(this.CalculateBMI_Click);
+            // 
+            // LblMeasurement
+            // 
+            this.LblMeasurement.AutoSize = true;
+            this.LblMeasurement.Location = new System.Drawing.Point(452, 0);
+            this.LblMeasurement.Name = "LblMeasurement";
+            this.LblMeasurement.Size = new System.Drawing.Size(0, 31);
+            this.LblMeasurement.TabIndex = 9;
+            // 
+            // LblWMeasurement
+            // 
+            this.LblWMeasurement.AutoSize = true;
+            this.LblWMeasurement.Location = new System.Drawing.Point(452, 99);
+            this.LblWMeasurement.Name = "LblWMeasurement";
+            this.LblWMeasurement.Size = new System.Drawing.Size(0, 31);
+            this.LblWMeasurement.TabIndex = 10;
             // 
             // BMICalculator
             // 
@@ -182,6 +200,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtBoxResult;
         private System.Windows.Forms.Button CalculateBMI;
+        private System.Windows.Forms.Label LblMeasurement;
+        private System.Windows.Forms.Label LblWMeasurement;
     }
 }
 
