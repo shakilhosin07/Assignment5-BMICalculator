@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Assignment5_BMICalculator
 {
-    public partial class Form1 : Form
+    public partial class BMICalculator : Form
     {
-        public Form1()
+        public BMICalculator()
         {
             InitializeComponent();
+        }
+
+        private void BMICalculator_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
