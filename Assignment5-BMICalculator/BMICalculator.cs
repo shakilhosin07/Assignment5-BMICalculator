@@ -10,7 +10,7 @@ using System.Windows.Forms;
 /* Name: Shakil Hosin
  * Date: August 10, 2017
  * Description: BMI CALCULATOR 
- * Version: 0.4 - Added the validations from the CalculateBMI button and entered the formula
+ * Version: 0.5 - Added blank labels in the form to change in the event that metric or imperial button is clicked. 
  */
 
 namespace Assignment5_BMICalculator
@@ -79,14 +79,14 @@ namespace Assignment5_BMICalculator
 
         private void MetricButton_Click(object sender, EventArgs e)
         {
-            LblMeasurement.Text = "Metres";
-            LblWMeasurement.Text = "Kilos";
+            LblMeasurement.Text = "In Metres";
+            LblWMeasurement.Text = "In Kilos";
         }
 
         private void ImperialButton_Click(object sender, EventArgs e)
         {
-            LblMeasurement.Text = "Inches";
-            LblWMeasurement.Text = "Pounds";
+            LblMeasurement.Text = "In Inches";
+            LblWMeasurement.Text = "In Pounds";
         }
     }
 }
