@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/* Name: Shakil Hosin
+ * Date: August 10, 2017
+ * Description: BMI CALCULATOR 
+ * Version: 0.3 - Finishing up the form and starting to add validations and calculations. 
+ */
 
 namespace Assignment5_BMICalculator
 {
@@ -34,10 +39,22 @@ namespace Assignment5_BMICalculator
 
         private void TxtBoxHeight_TextChanged(object sender, EventArgs e)
         {
-            if (true)
-            {
+          
+        }
 
-            }
+        private void MetricButton_CheckedChanged(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void TxtBoxWeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
