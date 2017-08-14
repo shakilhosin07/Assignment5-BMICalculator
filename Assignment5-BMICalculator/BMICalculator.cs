@@ -125,10 +125,6 @@ namespace Assignment5_BMICalculator
             LblMeasurement.Text = "In Inches";
             LblWMeasurement.Text = "In Pounds";
         }
-        /// <summary>
-        /// This method gets the string value of the result which can be attached the multiline text box. 
-        /// </summary>
-        /// <returns></returns>
 
     }    
     }
