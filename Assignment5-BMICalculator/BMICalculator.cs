@@ -19,7 +19,7 @@ namespace Assignment5_BMICalculator
     {
         //PRIVATE INSTANCE VARIABLES 
         private double _result;
-
+        private string _scale;
 
 
 
@@ -35,6 +35,18 @@ namespace Assignment5_BMICalculator
             set
             {
                 this._result = value;
+            }
+        }
+
+        public string Scale
+        {
+            get
+            {
+                return this._scale;
+            }
+            set
+            {
+                this._scale = value;
             }
         }
 
@@ -60,15 +72,15 @@ namespace Assignment5_BMICalculator
             //Checks whether the metric or imperial button is clicked down before calculating
             if (MetricButton.Checked)
             {
-                _result = Convert.ToDouble(TxtBoxWeight.Text) / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
-                TxtBoxResult.Text = "" + _result;
+                Result = Convert.ToDouble(TxtBoxWeight.Text) / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
+                TxtBoxResult.Text = "" + Result;
 
             }
             // Does the same for the imperial calculations
             if (ImperialButton.Checked)
             {
-               _result = Convert.ToDouble(TxtBoxWeight.Text) * 703 / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
-                TxtBoxResult.Text = "" + _result;
+                Result = Convert.ToDouble(TxtBoxWeight.Text) * 703 / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
+                TxtBoxResult.Text = "" + Result;
 
             }
         }
@@ -92,10 +104,31 @@ namespace Assignment5_BMICalculator
             LblMeasurement.Text = "In Inches";
             LblWMeasurement.Text = "In Pounds";
         }
-
-        private void TxtBoxBMIScale_TextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// This method gets the string value of the result which can be attached the multiline text box. 
+        /// </summary>
+        /// <returns></returns>
+        public string GetScale()
         {
-            numlines = TxtBoxBMIScale.Lines.Count();
+            if (Result < 18.6)
+            {
+                Scale =  "Underweight";
+            }
+            if (Result > 18.6 && Result < 25)
+            {
+                Scale = "Normal";
+            }
+            if (Result >= 25 && Result < 30)
+            {
+                Scale = "Overweight";
+            }
+            if (Result >= 30)
+            {
+               Scale = "Obese";
+            }
+            return Scale;
         }
+    }    
     }
-}
+ 
+

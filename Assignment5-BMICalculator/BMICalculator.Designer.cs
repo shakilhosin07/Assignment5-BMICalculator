@@ -172,7 +172,6 @@
             this.TxtBoxBMIScale.Name = "TxtBoxBMIScale";
             this.TxtBoxBMIScale.Size = new System.Drawing.Size(100, 20);
             this.TxtBoxBMIScale.TabIndex = 4;
-            this.TxtBoxBMIScale.TextChanged += new System.EventHandler(this.TxtBoxBMIScale_TextChanged);
             // 
             // BMICalculator
             // 
