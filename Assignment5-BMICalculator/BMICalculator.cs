@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 /* Name: Shakil Hosin
- * Date: August 10, 2017
+ * Date: August 11, 2017
  * Description: BMI CALCULATOR 
  * Version: 0.5 - Added blank labels in the form to change in the event that metric or imperial button is clicked. 
  */
