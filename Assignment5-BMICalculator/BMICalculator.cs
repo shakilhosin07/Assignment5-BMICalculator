@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /* Name: Shakil Hosin
  * Date: August 11, 2017
+ * 300922629
  * Description: BMI CALCULATOR 
  * Version: 0.7 - Displays integer as well as the the weight scale in accordance to bmi upon CalculateBMI.
  */

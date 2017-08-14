@@ -16,5 +16,21 @@ namespace Assignment5_BMICalculator
         {
             InitializeComponent();
         }
+        //PUBLIC PROPERTY
+        public BMICalculator BMICALCULATOR1
+        {
+            get
+            {
+                
+               return Program.bmicalculator;
+            }
+            
+        }
+        private void SplashScreenTimer_Tick(object sender, EventArgs e)
+        {
+            this.BMICALCULATOR1.Show();
+            this.Hide();
+            SplashScreenTimer.Enabled = false;
+        }
     }
 }
