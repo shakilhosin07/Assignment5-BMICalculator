@@ -8,10 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 /* Name: Shakil Hosin
- * Date: August 11, 2017
+ * Date: August 14, 2017
  * 300922629
  * Description: BMI CALCULATOR 
- * Version: 0.7 - Displays integer as well as the the weight scale in accordance to bmi upon CalculateBMI.
+ * Version: 0.8 - Added a try and catch to see if result = 0;
  */
 
 namespace Assignment5_BMICalculator
@@ -25,8 +25,6 @@ namespace Assignment5_BMICalculator
 
 
         //PUBLIC PROPERTIES 
-        //Property to count lines in the multiline text box 
-        public int numlines = 0;
         public double Result
         {
             get
@@ -73,32 +71,57 @@ namespace Assignment5_BMICalculator
             //Checks whether the metric or imperial button is clicked down before calculating
             if (MetricButton.Checked)
             {
-                Result = Convert.ToDouble(TxtBoxWeight.Text) / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
-                TxtBoxResult.Text = "" + Result;
+                try
+                {
+                    Result = Convert.ToDouble(TxtBoxWeight.Text) / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
+                    TxtBoxResult.Text = "" + Result;
+                }
+             catch
+                {
+
+                    Result = 0;
+                    
+
+                    TxtBoxResult.Text = "Please use a numerical value!";
+                    
+                }
 
             }
             // Does the same for the imperial calculations
             if (ImperialButton.Checked)
             {
-                Result = Convert.ToDouble(TxtBoxWeight.Text) * 703 / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
-                TxtBoxResult.Text = "" + Result;
+                try
+                {
+                    Result = Convert.ToDouble(TxtBoxWeight.Text) * 703 / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
+                    TxtBoxResult.Text = "" + Result;
+                }
+                catch
+                {
+                    Result = 0;
+                    TxtBoxResult = "Please use a numerical value!";
+                }
+                
 
             }
             //Checks the result calculation and updates the property Scale in accordance to underweight, normal, overweight, or obese. 
-
-            if (Result < 18.6)
+            /// If no value is entered, property "Scale, will return "Numbers only!";
+            if (Result == 0)
+            {
+                Scale = "Numbers only!";
+            }
+            else if (Result < 18.6)
             {
                 Scale = "Underweight";
             }
-            if (Result > 18.6 && Result < 25)
+           else if (Result > 18.6 && Result < 25)
             {
                 Scale = "Normal";
             }
-            if (Result >= 25 && Result < 30)
+           else if (Result >= 25 && Result < 30)
             {
                 Scale = "Overweight";
             }
-            if (Result >= 30)
+            else if (Result >= 30)
             {
                 Scale = "Obese";
             }

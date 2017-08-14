@@ -228,7 +228,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(285, 441);
+            this.ClientSize = new System.Drawing.Size(304, 441);
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.ImperialButton);
             this.Controls.Add(this.MetricButton);
