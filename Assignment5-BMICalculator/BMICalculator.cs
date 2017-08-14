@@ -17,6 +17,9 @@ namespace Assignment5_BMICalculator
 {
     public partial class BMICalculator : Form
     {
+        //Property to count lines in the multiline text box 
+        public int numlines = 0;
+
         public BMICalculator()
         {
             InitializeComponent();
@@ -26,9 +29,14 @@ namespace Assignment5_BMICalculator
         {
 
         }
-
+        /// <summary>
+        /// This method calculates the Bmi when clicked and displays the message to TxtBoxResult
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CalculateBMI_Click(object sender, EventArgs e)
         {
+            
             //Checks whether the metric or imperial button is clicked down before calculating
             if (MetricButton.Checked)
             {
@@ -76,17 +84,30 @@ namespace Assignment5_BMICalculator
                 }
             }
         }
-
+        /// <summary>
+        /// This Displays the units that the metric calculations are to be entered in upon clicking
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MetricButton_Click(object sender, EventArgs e)
         {
             LblMeasurement.Text = "In Metres";
             LblWMeasurement.Text = "In Kilos";
         }
-
+        /// <summary>
+        ///  This Displays the units that the imperial calculations are to be entered in upon clicking
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ImperialButton_Click(object sender, EventArgs e)
         {
             LblMeasurement.Text = "In Inches";
             LblWMeasurement.Text = "In Pounds";
+        }
+
+        private void TxtBoxBMIScale_TextChanged(object sender, EventArgs e)
+        {
+            numlines = TxtBoxBMIScale.Lines.Count();
         }
     }
 }
