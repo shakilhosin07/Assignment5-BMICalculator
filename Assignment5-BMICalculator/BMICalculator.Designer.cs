@@ -49,7 +49,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.78577F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.21422F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
             this.tableLayoutPanel1.Controls.Add(this.LblHeight, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.TxtBoxHeight, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LblWeight, 0, 1);
@@ -80,7 +80,7 @@
             // 
             this.TxtBoxHeight.Location = new System.Drawing.Point(226, 3);
             this.TxtBoxHeight.Name = "TxtBoxHeight";
-            this.TxtBoxHeight.Size = new System.Drawing.Size(219, 38);
+            this.TxtBoxHeight.Size = new System.Drawing.Size(218, 38);
             this.TxtBoxHeight.TabIndex = 4;
             // 
             // LblWeight
@@ -96,7 +96,7 @@
             // 
             this.TxtBoxWeight.Location = new System.Drawing.Point(226, 102);
             this.TxtBoxWeight.Name = "TxtBoxWeight";
-            this.TxtBoxWeight.Size = new System.Drawing.Size(219, 38);
+            this.TxtBoxWeight.Size = new System.Drawing.Size(218, 38);
             this.TxtBoxWeight.TabIndex = 6;
             // 
             // label1
@@ -112,13 +112,13 @@
             // 
             this.TxtBoxResult.Location = new System.Drawing.Point(226, 189);
             this.TxtBoxResult.Name = "TxtBoxResult";
-            this.TxtBoxResult.Size = new System.Drawing.Size(219, 38);
+            this.TxtBoxResult.Size = new System.Drawing.Size(218, 38);
             this.TxtBoxResult.TabIndex = 8;
             // 
             // LblMeasurement
             // 
             this.LblMeasurement.AutoSize = true;
-            this.LblMeasurement.Location = new System.Drawing.Point(451, 0);
+            this.LblMeasurement.Location = new System.Drawing.Point(450, 0);
             this.LblMeasurement.Name = "LblMeasurement";
             this.LblMeasurement.Size = new System.Drawing.Size(0, 31);
             this.LblMeasurement.TabIndex = 9;
@@ -126,7 +126,7 @@
             // LblWMeasurement
             // 
             this.LblWMeasurement.AutoSize = true;
-            this.LblWMeasurement.Location = new System.Drawing.Point(451, 99);
+            this.LblWMeasurement.Location = new System.Drawing.Point(450, 99);
             this.LblWMeasurement.Name = "LblWMeasurement";
             this.LblWMeasurement.Size = new System.Drawing.Size(0, 31);
             this.LblWMeasurement.TabIndex = 10;
@@ -170,8 +170,9 @@
             this.TxtBoxBMIScale.Location = new System.Drawing.Point(421, 431);
             this.TxtBoxBMIScale.Multiline = true;
             this.TxtBoxBMIScale.Name = "TxtBoxBMIScale";
-            this.TxtBoxBMIScale.Size = new System.Drawing.Size(100, 20);
+            this.TxtBoxBMIScale.Size = new System.Drawing.Size(167, 109);
             this.TxtBoxBMIScale.TabIndex = 4;
+ 
             // 
             // BMICalculator
             // 

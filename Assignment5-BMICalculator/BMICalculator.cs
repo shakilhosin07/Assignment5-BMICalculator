@@ -10,7 +10,7 @@ using System.Windows.Forms;
 /* Name: Shakil Hosin
  * Date: August 11, 2017
  * Description: BMI CALCULATOR 
- * Version: 0.5 - Added blank labels in the form to change in the event that metric or imperial button is clicked. 
+ * Version: 0.7 - Displays integer as well as the the weight scale in accordance to bmi upon CalculateBMI.
  */
 
 namespace Assignment5_BMICalculator
@@ -83,6 +83,27 @@ namespace Assignment5_BMICalculator
                 TxtBoxResult.Text = "" + Result;
 
             }
+            //Checks the result calculation and updates the property Scale in accordance to underweight, normal, overweight, or obese. 
+
+            if (Result < 18.6)
+            {
+                Scale = "Underweight";
+            }
+            if (Result > 18.6 && Result < 25)
+            {
+                Scale = "Normal";
+            }
+            if (Result >= 25 && Result < 30)
+            {
+                Scale = "Overweight";
+            }
+            if (Result >= 30)
+            {
+                Scale = "Obese";
+            }
+
+            TxtBoxBMIScale.Text = Scale;
+
         }
         /// <summary>
         /// This Displays the units that the metric calculations are to be entered in upon clicking
@@ -108,26 +129,7 @@ namespace Assignment5_BMICalculator
         /// This method gets the string value of the result which can be attached the multiline text box. 
         /// </summary>
         /// <returns></returns>
-        public string GetScale()
-        {
-            if (Result < 18.6)
-            {
-                Scale =  "Underweight";
-            }
-            if (Result > 18.6 && Result < 25)
-            {
-                Scale = "Normal";
-            }
-            if (Result >= 25 && Result < 30)
-            {
-                Scale = "Overweight";
-            }
-            if (Result >= 30)
-            {
-               Scale = "Obese";
-            }
-            return Scale;
-        }
+
     }    
     }
  
