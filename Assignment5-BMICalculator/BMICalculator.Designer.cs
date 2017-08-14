@@ -45,10 +45,13 @@
             this.ImperialButton = new System.Windows.Forms.RadioButton();
             this.MetricButton = new System.Windows.Forms.RadioButton();
             this.TitleLabel = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.BMIProgressBar = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -58,7 +61,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.04805F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.95195F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tableLayoutPanel1.Controls.Add(this.TxtBoxBMIScale, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
@@ -74,31 +77,32 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.82456F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(314, 338);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(303, 338);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // TxtBoxBMIScale
             // 
             this.TxtBoxBMIScale.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBoxBMIScale.Location = new System.Drawing.Point(3, 247);
+            this.TxtBoxBMIScale.Location = new System.Drawing.Point(0, 53);
             this.TxtBoxBMIScale.Multiline = true;
             this.TxtBoxBMIScale.Name = "TxtBoxBMIScale";
-            this.TxtBoxBMIScale.Size = new System.Drawing.Size(144, 44);
+            this.TxtBoxBMIScale.Size = new System.Drawing.Size(139, 44);
             this.TxtBoxBMIScale.TabIndex = 4;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.CalculateBMI);
-            this.panel3.Location = new System.Drawing.Point(153, 247);
+            this.panel3.Controls.Add(this.BMIProgressBar);
+            this.panel3.Location = new System.Drawing.Point(148, 247);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 88);
+            this.panel3.Size = new System.Drawing.Size(152, 88);
             this.panel3.TabIndex = 3;
             // 
             // CalculateBMI
             // 
-            this.CalculateBMI.Location = new System.Drawing.Point(0, 0);
+            this.CalculateBMI.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalculateBMI.Location = new System.Drawing.Point(5, 3);
             this.CalculateBMI.Name = "CalculateBMI";
-            this.CalculateBMI.Size = new System.Drawing.Size(131, 76);
+            this.CalculateBMI.Size = new System.Drawing.Size(131, 45);
             this.CalculateBMI.TabIndex = 3;
             this.CalculateBMI.Text = "Calculate BMI!";
             this.CalculateBMI.UseVisualStyleBackColor = true;
@@ -108,9 +112,9 @@
             // 
             this.panel2.Controls.Add(this.TxtBoxWeight);
             this.panel2.Controls.Add(this.LblWMeasurement);
-            this.panel2.Location = new System.Drawing.Point(153, 93);
+            this.panel2.Location = new System.Drawing.Point(148, 93);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(158, 67);
+            this.panel2.Size = new System.Drawing.Size(152, 67);
             this.panel2.TabIndex = 3;
             // 
             // TxtBoxWeight
@@ -133,9 +137,9 @@
             // 
             this.panel1.Controls.Add(this.TxtBoxHeight);
             this.panel1.Controls.Add(this.LblMeasurement);
-            this.panel1.Location = new System.Drawing.Point(153, 3);
+            this.panel1.Location = new System.Drawing.Point(148, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(158, 75);
+            this.panel1.Size = new System.Drawing.Size(152, 75);
             this.panel1.TabIndex = 3;
             // 
             // TxtBoxHeight
@@ -183,7 +187,7 @@
             // 
             // TxtBoxResult
             // 
-            this.TxtBoxResult.Location = new System.Drawing.Point(153, 166);
+            this.TxtBoxResult.Location = new System.Drawing.Point(148, 166);
             this.TxtBoxResult.Name = "TxtBoxResult";
             this.TxtBoxResult.Size = new System.Drawing.Size(91, 39);
             this.TxtBoxResult.TabIndex = 8;
@@ -223,6 +227,23 @@
             this.TitleLabel.TabIndex = 3;
             this.TitleLabel.Text = "BMI CALCULATOR";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.CalculateBMI);
+            this.panel4.Controls.Add(this.TxtBoxBMIScale);
+            this.panel4.Location = new System.Drawing.Point(3, 247);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(139, 88);
+            this.panel4.TabIndex = 4;
+            // 
+            // BMIProgressBar
+            // 
+            this.BMIProgressBar.Location = new System.Drawing.Point(0, 26);
+            this.BMIProgressBar.Maximum = 30;
+            this.BMIProgressBar.Name = "BMIProgressBar";
+            this.BMIProgressBar.Size = new System.Drawing.Size(152, 22);
+            this.BMIProgressBar.TabIndex = 0;
+            // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
@@ -249,6 +270,8 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +296,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ProgressBar BMIProgressBar;
     }
 }
 

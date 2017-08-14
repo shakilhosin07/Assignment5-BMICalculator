@@ -37,7 +37,7 @@ namespace Assignment5_BMICalculator
             }
         }
 
-        public string Scale
+        public string BmiScale
         {
             get
             {
@@ -67,7 +67,8 @@ namespace Assignment5_BMICalculator
         /// <param name="e"></param>
         private void CalculateBMI_Click(object sender, EventArgs e)
         {
-
+            BMIProgressBar.Value = 0;
+            
             //Checks whether the metric or imperial button is clicked down before calculating
             if (MetricButton.Checked)
             {
@@ -98,7 +99,7 @@ namespace Assignment5_BMICalculator
                 catch
                 {
                     Result = 0;
-                    TxtBoxResult = "Please use a numerical value!";
+                    TxtBoxResult.Text = "Please use a numerical value!";
                 }
                 
 
@@ -107,26 +108,30 @@ namespace Assignment5_BMICalculator
             /// If no value is entered, property "Scale, will return "Numbers only!";
             if (Result == 0)
             {
-                Scale = "Numbers only!";
+                BmiScale = "Numbers only!";
             }
             else if (Result < 18.6)
             {
-                Scale = "Underweight";
+                BmiScale = "Underweight";
+                BMIProgressBar.Value = 8;
             }
            else if (Result > 18.6 && Result < 25)
             {
-                Scale = "Normal";
+                BmiScale = "Normal";
+                BMIProgressBar.Value = 15;
             }
            else if (Result >= 25 && Result < 30)
             {
-                Scale = "Overweight";
+                BmiScale = "Overweight";
+                BMIProgressBar.Value = 23;
             }
             else if (Result >= 30)
             {
-                Scale = "Obese";
+                BmiScale = "Obese";
+                BMIProgressBar.Value = BMIProgressBar.Maximum;
             }
 
-            TxtBoxBMIScale.Text = Scale;
+            TxtBoxBMIScale.Text = BmiScale;
 
         }
         /// <summary>
