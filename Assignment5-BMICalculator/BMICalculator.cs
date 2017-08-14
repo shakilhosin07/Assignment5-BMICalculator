@@ -17,9 +17,29 @@ namespace Assignment5_BMICalculator
 {
     public partial class BMICalculator : Form
     {
+        //PRIVATE INSTANCE VARIABLES 
+        private double _result;
+
+
+
+
+        //PUBLIC PROPERTIES 
         //Property to count lines in the multiline text box 
         public int numlines = 0;
+        public double Result
+        {
+            get
+            {
+                return this._result;
+            }
+            set
+            {
+                this._result = value;
+            }
+        }
 
+
+        //CONSTRUCTORS
         public BMICalculator()
         {
             InitializeComponent();
@@ -36,52 +56,20 @@ namespace Assignment5_BMICalculator
         /// <param name="e"></param>
         private void CalculateBMI_Click(object sender, EventArgs e)
         {
-            
+
             //Checks whether the metric or imperial button is clicked down before calculating
             if (MetricButton.Checked)
             {
-                double result = Convert.ToDouble(TxtBoxWeight.Text) / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
-                TxtBoxResult.Text = "" + result;
+                _result = Convert.ToDouble(TxtBoxWeight.Text) / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
+                TxtBoxResult.Text = "" + _result;
 
-                if (result < 18.6)
-                {
-                    TxtBoxResult.Text = "Underweight";
-                }
-                if (result > 18.6 && result < 25)
-                {
-                    TxtBoxResult.Text = "Normal";
-                }
-                if (result >= 25 && result < 30)
-                {
-                    TxtBoxResult.Text = "Overweight";
-                }
-                if (result >= 30)
-                {
-                    TxtBoxResult.Text = "Obese";
-                }
             }
             // Does the same for the imperial calculations
             if (ImperialButton.Checked)
             {
-                double result = Convert.ToDouble(TxtBoxWeight.Text) * 703 / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
-                TxtBoxResult.Text = "" + result;
+               _result = Convert.ToDouble(TxtBoxWeight.Text) * 703 / (Convert.ToDouble(TxtBoxHeight.Text) * Convert.ToDouble(TxtBoxHeight.Text));
+                TxtBoxResult.Text = "" + _result;
 
-                if (result < 18.6)
-                {
-                   TxtBoxResult.Text = "Underweight";
-                }
-                if (result > 18.6 && result < 25)
-                {
-                   TxtBoxResult.Text = "Normal";
-                }
-                if (result >= 25 && result < 30)
-                {
-                   TxtBoxResult.Text = "Overweight";
-                }
-                if (result >= 30)
-                {
-                    TxtBoxResult.Text = "Obese";
-                }
             }
         }
         /// <summary>
