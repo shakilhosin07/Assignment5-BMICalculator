@@ -7,7 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/* Name: Shakil Hosin
+ * Date: August 15, 2017
+ * 300922629
+ * Description: Splash Screen
+ * Version: 0.1 - set timer
+ */
 namespace Assignment5_BMICalculator
 {
     public partial class SplashScreen : Form
