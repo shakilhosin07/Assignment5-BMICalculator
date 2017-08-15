@@ -11,7 +11,7 @@ using System.Windows.Forms;
  * Date: August 14, 2017
  * 300922629
  * Description: BMI CALCULATOR 
- * Version: 0.8 - Added a try and catch to see if result = 0;
+ * Version: 0.9 - Added the reset button and finalized the program;
  */
 
 namespace Assignment5_BMICalculator
@@ -108,7 +108,7 @@ namespace Assignment5_BMICalculator
             /// If no value is entered, property "Scale, will return "Numbers only!";
             if (Result == 0)
             {
-                BmiScale = "Numbers only!";
+                BmiScale = "Invalid!";
             }
             else if (Result < 18.6)
             {
@@ -155,6 +155,18 @@ namespace Assignment5_BMICalculator
             LblWMeasurement.Text = "In Pounds";
         }
 
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            MetricButton.Checked = false;
+            ImperialButton.Checked = false;
+            TxtBoxHeight.Text = "";
+            TxtBoxResult.Text = "";
+            TxtBoxBMIScale.Text = "";
+            Result = 0;
+            BmiScale = "";
+            LblMeasurement.Text = "";
+            LblWMeasurement.Text = "";
+        }
     }    
     }
  

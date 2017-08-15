@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /* Name: Shakil Hosin
  * 300922629
- * Date: August 11, 2017
+ * Date: August 15, 2017
  * Description: BMI CALCULATOR 
- * Version: 0.1 - Runs the form built named BMICalculator. 
+ * Version: 0.2 - designed the splash screen and finalized program. 
  */
 namespace Assignment5_BMICalculator
 {

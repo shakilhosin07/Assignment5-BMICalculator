@@ -32,5 +32,6 @@ namespace Assignment5_BMICalculator
             this.Hide();
             SplashScreenTimer.Enabled = false;
         }
+
     }
 }
