@@ -58,7 +58,9 @@ namespace Assignment5_BMICalculator
 
         private void BMICalculator_Load(object sender, EventArgs e)
         {
-
+            ImperialButton.Checked = true;
+            LblMeasurement.Text = "In Inches";
+            LblWMeasurement.Text = "In Pounds";
         }
         /// <summary>
         /// This method calculates the Bmi when clicked and displays the message to TxtBoxResult
@@ -83,7 +85,7 @@ namespace Assignment5_BMICalculator
                     Result = 0;
                     
 
-                    TxtBoxResult.Text = "Please use a numerical value!";
+                    TxtBoxResult.Text = "Please use numbers!";
                     
                 }
 
@@ -99,7 +101,7 @@ namespace Assignment5_BMICalculator
                 catch
                 {
                     Result = 0;
-                    TxtBoxResult.Text = "Please use a numerical value!";
+                    TxtBoxResult.Text = "Please use numbers!";
                 }
                 
 
@@ -167,6 +169,7 @@ namespace Assignment5_BMICalculator
             BmiScale = "";
             LblMeasurement.Text = "";
             LblWMeasurement.Text = "";
+            BMIProgressBar.Value = 0;
         }
     }    
     }

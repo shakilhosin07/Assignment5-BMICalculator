@@ -33,6 +33,7 @@
             this.CalculateBMI = new System.Windows.Forms.Button();
             this.TxtBoxBMIScale = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.BMIProgressBar = new System.Windows.Forms.ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TxtBoxWeight = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.ImperialButton = new System.Windows.Forms.RadioButton();
             this.MetricButton = new System.Windows.Forms.RadioButton();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.ResetButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -118,6 +118,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(152, 88);
             this.panel3.TabIndex = 3;
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Location = new System.Drawing.Point(16, 53);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(113, 32);
+            this.ResetButton.TabIndex = 1;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // BMIProgressBar
             // 
@@ -206,9 +216,10 @@
             // 
             // TxtBoxResult
             // 
+            this.TxtBoxResult.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBoxResult.Location = new System.Drawing.Point(148, 166);
             this.TxtBoxResult.Name = "TxtBoxResult";
-            this.TxtBoxResult.Size = new System.Drawing.Size(91, 39);
+            this.TxtBoxResult.Size = new System.Drawing.Size(152, 26);
             this.TxtBoxResult.TabIndex = 8;
             // 
             // ImperialButton
@@ -245,16 +256,6 @@
             this.TitleLabel.Size = new System.Drawing.Size(249, 29);
             this.TitleLabel.TabIndex = 3;
             this.TitleLabel.Text = "BMI CALCULATOR";
-            // 
-            // ResetButton
-            // 
-            this.ResetButton.Location = new System.Drawing.Point(16, 53);
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(113, 32);
-            this.ResetButton.TabIndex = 1;
-            this.ResetButton.Text = "Reset";
-            this.ResetButton.UseVisualStyleBackColor = true;
-            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // BMICalculator
             // 
