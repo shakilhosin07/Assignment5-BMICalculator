@@ -160,6 +160,7 @@ namespace Assignment5_BMICalculator
             MetricButton.Checked = false;
             ImperialButton.Checked = false;
             TxtBoxHeight.Text = "";
+            TxtBoxWeight.Text = "";
             TxtBoxResult.Text = "";
             TxtBoxBMIScale.Text = "";
             Result = 0;
